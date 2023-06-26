@@ -16,3 +16,10 @@ console.log(returnProduct([3, 3, 3])) // returns 3 * 3 * 3 = 27
 console.log(returnProduct([4, 1, 2])); // returns 4 * 1 * 2 = 8
 console.log(returnProduct([4, 0, 2])); // returns 4 * 0 * 2 = 0
 console.log(returnProduct([5, 3, 2])); // returns 5 * 3 * 2 = 30
+
+// Create a function called 'isOdd' that takes a number as a parameter.
+// The function should use the ternary operator to log a message.
+// The log should tell the number passed in and whether it is odd or not.
+function isOdd(number) {
+    (number % 2 ===1) ? console.log("Number is odd.") : console.log("Number is even.")
+}
