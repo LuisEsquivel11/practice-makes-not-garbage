@@ -1,0 +1,61 @@
+.page-wrapper {
+    font-family: sans-serif;
+}
+
+img {
+    max-width: 100%
+}
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+.snap {
+    max-width: 100px;
+}
+.gap-50 {
+    gap: 50px;
+}
+
+.nav-button {
+    border-radius: 10px;
+    border-color: grey;
+    background-color: white;
+    text: grey;
+
+}
+
+.hero-btn {
+    background-color: black;
+    color: white;
+    border-radius: 12px;
+    max-width: 28%;
+    height: 50px;
+    margin-top: 20px;
+}
+.hero-container {
+    margin-top: 50px;
+}
+.fluid {
+
+}
+
+.hero-img-dt {
+    max-width: 100%;
+}
+
+.gap-100 {
+    gap: 100px;
+}
+
+.hero-h1 {
+    font-size: 5rem;
+}
+.hero-p {
+    font-size: 25px;
+}
+.hero-image-row {
+    margin-top: 50px;
+}
+.attribution {
+    margin-top: 50px;
+}
