@@ -124,11 +124,11 @@ function birthdayCakeCandles(arr) {
 /* Given a time in -hour AM/PM format, convert it to military (24-hour) time.
 Note: - 12:00:00AM on a 12-hour clock is 00:00:00 on a 24-hour clock.
 - 12:00:00PM on a 12-hour clock is 12:00:00 on a 24-hour clock.*/
-let s = '12:01:00AM'
+let s = '1:01:00AM'
 let a = '2:01:00PM'
 let b = '4:01:00PM'
 let c = '6:01:00PM'
-let d = '7:01:00PM'
+let d = '1:01:00PM'
 let e = '10:01:00PM'
 let f = '11:01:00PM'
 function timeConversion(s) {
@@ -147,8 +147,9 @@ function timeConversion(s) {
             hour = "00";
         }
     }
+    hour = hour.toString().padStart(2, "0");
 
-    return `${hour.toString()}:${minutes}:${seconds}`;
+    return `${hour}:${minutes}:${seconds}`;
 }
 console.log(timeConversion(s), s)
 console.log(timeConversion(a), a)
