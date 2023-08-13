@@ -31,6 +31,7 @@ function compareTriplets(a, b) {
     return scores;
 }
 
+
 // 5. (Java)
 // In this challenge, you are required to calculate and print the sum of the elements in an
 // array, keeping in mind that some of those integers may be quite large.
@@ -65,13 +66,40 @@ function plusMinus(arr) {
     let zeroRatio = zeros / arr.length.toFixed(6);
     let positiveRatio = positives / arr.length.toFixed(6);
     let negativeRatio = negatives / arr.length.toFixed(6)
-    console.log(positiveRatio);
-    console.log(negativeRatio);
-    console.log(zeroRatio);
 }
 plusMinus(arr)
 
 
+// Staircase
+
+function staircase(n) {
+    let space = "     "
+    let sign = "#"
+    for (let i = 0; i < n; i++) {
+
+        space += sign;
+        console.log(space);
+    }
+
+}
+staircase(6)
+
+// Mini-Max Sum
+const array = [1, 2, 3, 4, 5]
+function miniMaxSum(arr) {
+    let total = 0;
+    let sums = []
+    for (let i = 0; i < arr.length; i++ ) {
+        total += arr[i];
+    }
+    for (let i = 0; i < 5; i++) {
+        sums.push(total - arr[i])
+    }
+    const max = sums.reduce((a, b)=> Math.max(a, b), -Infinity)
+    const min = sums.reduce((a, b)=> Math.min(a, b))
+    return console.log('%s, %s', min, max)
+}
+console.log(miniMaxSum(array))
 
 
 

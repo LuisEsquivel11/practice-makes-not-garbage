@@ -43,3 +43,57 @@ function compareTriplets(a, b) {
 //     return total;
 //
 // }
+
+// 6. Plus minus
+
+const arr = [1,1,0,-1,-1]
+
+function plusMinus(arr) {
+    let positives = 0;
+    let negatives = 0;
+    let zeros = 0;
+
+    for (let i = 0; i < arr.length; i++) {
+        if (Math.sign(arr[i]) === -1) {
+            negatives += 1;
+        } else if (Math.sign(arr[i]) === 1 ) {
+            positives += 1;
+        } else {
+            zeros += 1;
+        }
+    }
+    let zeroRatio = zeros / arr.length.toFixed(6);
+    let positiveRatio = positives / arr.length.toFixed(6);
+    let negativeRatio = negatives / arr.length.toFixed(6)
+}
+plusMinus(arr)
+
+
+// Staircase
+
+function staircase(n) {
+    let space = "     "
+    let sign = "#"
+    for (let i = 0; i < n; i++) {
+
+        space += sign;
+        console.log(space);
+    }
+
+}
+staircase(6)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
