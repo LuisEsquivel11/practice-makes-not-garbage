@@ -131,30 +131,57 @@ let c = '6:01:00PM'
 let d = '1:01:00PM'
 let e = '10:01:00PM'
 let f = '11:01:00PM'
-function timeConversion(s) {
-    let time = s.split(':')
-    let minutes = time[1]
-    let seconds = time[2].slice(0,2)
-    let hour = parseInt(s.split(":"));
-    if (s.includes("PM")) {
-       if(hour === 12) {
-           hour = "12";
-       } else {
-        hour += 12;
-       }
-    } else {
-        if (hour === 12 ) {
-            hour = "00";
+// function timeConversion(s) {
+//     let time = s.split(':')
+//     let minutes = time[1]
+//     let seconds = time[2].slice(0,2)
+//     let hour = parseInt(s.split(":"));
+//     if (s.includes("PM")) {
+//        if(hour === 12) {
+//            hour = "12";
+//        } else {
+//         hour += 12;
+//        }
+//     } else {
+//         if (hour === 12 ) {
+//             hour = "00";
+//         }
+//     }
+//     hour = hour.toString().padStart(2, "0");
+//
+//     return `${hour}:${minutes}:${seconds}`;
+// }
+// console.log(timeConversion(s), s)
+// console.log(timeConversion(a), a)
+// console.log(timeConversion(b), b)
+// console.log(timeConversion(c),c)
+// console.log(timeConversion(d), d)
+// console.log(timeConversion(e),e)
+// console.log(timeConversion(f), f)
+
+// Grading Students
+let grades = [4,
+    73,
+    67,
+    38,
+    33,
+]
+function gradingStudents(grades) {
+    let roundedGrades = [];
+    for (let i = 0; i < grades.length; i++) {
+        if (grades[i] >= 38 && grades[i] % 5 === 3 ) {
+            grades[i] = grades[i] + 2
+            roundedGrades.push(grades[i])
+
+        } else if (grades[i] >= 38 && grades[i] % 5 === 4) {
+            grades[i] = grades[i] + 1
+            roundedGrades.push(grades[i])
+
+        } else {
+            roundedGrades.push(grades[i])
         }
     }
-    hour = hour.toString().padStart(2, "0");
-
-    return `${hour}:${minutes}:${seconds}`;
+    return roundedGrades
 }
-console.log(timeConversion(s), s)
-console.log(timeConversion(a), a)
-console.log(timeConversion(b), b)
-console.log(timeConversion(c),c)
-console.log(timeConversion(d), d)
-console.log(timeConversion(e),e)
-console.log(timeConversion(f), f)
+
+console.log(gradingStudents(grades));;
