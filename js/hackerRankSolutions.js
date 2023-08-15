@@ -210,4 +210,7 @@ function breakingRecords(scores) {
     // if score is less than low score , that is now the low score and 1 point is added to didnt beat score
 
 }
-    console.log(breakingRecords(scores))
+
+// Number Line Jumps
+
+

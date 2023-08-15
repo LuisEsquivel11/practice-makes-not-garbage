@@ -31,6 +31,7 @@ function compareTriplets(a, b) {
     return scores;
 }
 
+
 // 5. (Java)
 // In this challenge, you are required to calculate and print the sum of the elements in an
 // array, keeping in mind that some of those integers may be quite large.
@@ -83,17 +84,133 @@ function staircase(n) {
 }
 staircase(6)
 
+// Mini-Max Sum
+const array = [1, 2, 3, 4, 5]
+function miniMaxSum(arr) {
+    let total = 0;
+    let sums = []
+    for (let i = 0; i < arr.length; i++ ) {
+        total += arr[i];
+    }
+    for (let i = 0; i < 5; i++) {
+        sums.push(total - arr[i])
+    }
+    const max = sums.reduce((a, b)=> Math.max(a, b), -Infinity)
+    const min = sums.reduce((a, b)=> Math.min(a, b))
+    return console.log('%s, %s', min, max)
+}
+console.log(miniMaxSum(array))
+
+// birthdayCakeCandles
+/* You are in charge of the cake for a child's birthday. You have decided
+the cake will have one candle for each year of their total age.
+They will only be able to blow out the tallest of the candles.
+Count how many candles are tallest.*/
+const candles = [3, 2, 1, 3];
+
+function birthdayCakeCandles(arr) {
+    let tallCandles = 0;
+    const max = arr.reduce((a, b) => Math.max(a, b), -Infinity);
+    for (let num of arr) {
+        if(num === max) {
+            tallCandles++
+        }
+         }
+         return tallCandles;
+}
 
 
+//Time Conversion
+/* Given a time in -hour AM/PM format, convert it to military (24-hour) time.
+Note: - 12:00:00AM on a 12-hour clock is 00:00:00 on a 24-hour clock.
+- 12:00:00PM on a 12-hour clock is 12:00:00 on a 24-hour clock.*/
+let s = '1:01:00AM'
+let a = '2:01:00PM'
+let b = '4:01:00PM'
+let c = '6:01:00PM'
+let d = '1:01:00PM'
+let e = '10:01:00PM'
+let f = '11:01:00PM'
+// function timeConversion(s) {
+//     let time = s.split(':')
+//     let minutes = time[1]
+//     let seconds = time[2].slice(0,2)
+//     let hour = parseInt(s.split(":"));
+//     if (s.includes("PM")) {
+//        if(hour === 12) {
+//            hour = "12";
+//        } else {
+//         hour += 12;
+//        }
+//     } else {
+//         if (hour === 12 ) {
+//             hour = "00";
+//         }
+//     }
+//     hour = hour.toString().padStart(2, "0");
+//
+//     return `${hour}:${minutes}:${seconds}`;
+// }
+// console.log(timeConversion(s), s)
+// console.log(timeConversion(a), a)
+// console.log(timeConversion(b), b)
+// console.log(timeConversion(c),c)
+// console.log(timeConversion(d), d)
+// console.log(timeConversion(e),e)
+// console.log(timeConversion(f), f)
 
+// Grading Students
+let grades = [4,
+    73,
+    67,
+    38,
+    33,
+]
+function gradingStudents(grades) {
+    let roundedGrades = [];
+    for (let i = 0; i < grades.length; i++) {
+        if (grades[i] >= 38 && grades[i] % 5 === 3 ) {
+            grades[i] = grades[i] + 2
+            roundedGrades.push(grades[i])
 
+        } else if (grades[i] >= 38 && grades[i] % 5 === 4) {
+            grades[i] = grades[i] + 1
+            roundedGrades.push(grades[i])
 
+        } else {
+            roundedGrades.push(grades[i])
+        }
+    }
+    return roundedGrades
+}
 
+//Breaking the records
 
+const scores = [10, 5, 20, 20, 4, 5, 2, 25, 1]
 
+function breakingRecords(scores) {
+    let highScore = scores[0]
+    let lowScore = scores[0]
+    let beatScore = 0;
+    let didntBeatScore = 0;
+    for (let i = 0; i < scores.length; i++) {
+        if (scores[i] > highScore) {
+            highScore = scores[i]
+            beatScore++;
+        } else if (scores[i] < lowScore) {
+            lowScore = scores[i]
+            didntBeatScore++;
+        }
 
+    }
+        return [beatScore, didntBeatScore]
 
+    //if the next score is greater than highscore , that is now the highest score and 1 point is add to beatScore
 
+    // if score is less than low score , that is now the low score and 1 point is added to didnt beat score
 
+}
+
+// Number Line Jumps
 
 
