@@ -78,7 +78,7 @@ function staircase(n) {
     for (let i = 0; i < n; i++) {
 
         space += sign;
-        console.log(space);
+        // console.log(space);
     }
 
 }
@@ -99,7 +99,7 @@ function miniMaxSum(arr) {
     const min = sums.reduce((a, b)=> Math.min(a, b))
     return console.log('%s, %s', min, max)
 }
-console.log(miniMaxSum(array))
+// console.log(miniMaxSum(array))
 
 // birthdayCakeCandles
 /* You are in charge of the cake for a child's birthday. You have decided
@@ -124,13 +124,13 @@ function birthdayCakeCandles(arr) {
 /* Given a time in -hour AM/PM format, convert it to military (24-hour) time.
 Note: - 12:00:00AM on a 12-hour clock is 00:00:00 on a 24-hour clock.
 - 12:00:00PM on a 12-hour clock is 12:00:00 on a 24-hour clock.*/
-let s = '1:01:00AM'
-let a = '2:01:00PM'
-let b = '4:01:00PM'
-let c = '6:01:00PM'
-let d = '1:01:00PM'
-let e = '10:01:00PM'
-let f = '11:01:00PM'
+// let s = '1:01:00AM'
+// let a = '2:01:00PM'
+// // let b = '4:01:00PM'
+// let c = '6:01:00PM'
+// let d = '1:01:00PM'
+// let e = '10:01:00PM'
+// let f = '11:01:00PM'
 // function timeConversion(s) {
 //     let time = s.split(':')
 //     let minutes = time[1]
@@ -211,6 +211,68 @@ function breakingRecords(scores) {
 
 }
 
-// Number Line Jumps
+// // Divisible sum pairs
+// let ar = [1, 3, 2, 6, 1, 2]
+// let n = 6
+// // let k = 3
+// divisibleSumPairs(n, k, ar)
+// function divisibleSumPairs(n, k, ar) {
+//         let counter = 0;
+//         let index = 0;
+//
+//         // do {
+//             for (let i = 0; i < ar.length; i++) {
+//                 let num = ar[i]
+//                 index = i;
+//                 console.log(num)
+//                 let element;
+//                 for (let j = 1; j < index -1; i ++) {
+//                     console.log(num + ar[j] , i)
+//                     if ( (index < n) && (num + j[i]) % 3 === 0) {
+//                         console.log("yes")
+//                         if (j === 6) {
+//                             break
+//                         }
+//                     }
+//                 }
+//                 }
+
+        //
+        // } while( index <= n) {
+
+
+    // }
+
+    // Bill Division
+
+const bill = [3, 10, 2,9]
+let k = 1;
+let b = 4;
+function bonAppetit(bill, k, b) {
+    let billTotal = 0;
+    let annasActualBill = 0;
+    for (let i = 0; i < bill.length; i ++) {
+        billTotal += bill[i]
+    }
+    annasActualBill = (billTotal - bill[k]) / 2
+    console.log(billTotal, annasActualBill)
+    let difference = annasActualBill - b;
+    if (difference === 0) {
+        console.log( "Bon Appetit");
+    } else {
+       console.log( difference);
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
 
 
