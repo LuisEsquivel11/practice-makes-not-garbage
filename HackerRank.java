@@ -49,19 +49,19 @@ public class HackerRank {
 //        }
 //        return inbetween;
 //    }
-    public static int getTotalX(ArrayList<Integer> a, ArrayList<Integer> b) {
-        int inbetween = 0;
-        for (int aNum : a) {
-            int check = a.get(0) ;
-            for (int i = 0; i < b.size(); i++)
-                if (b.get(i) % check == 0 )
-                    inbetween++;
-            System.out.println(inbetween);
-
-
-        }
-        return inbetween;
-    }
+//    public static int getTotalX(ArrayList<Integer> a, ArrayList<Integer> b) {
+//        int inbetween = 0;
+//        for (int aNum : a) {
+//            int check = a.get(0) ;
+//            for (int i = 0; i < b.size(); i++)
+//                if (b.get(i) % check == 0 )
+//                    inbetween++;
+//            System.out.println(inbetween);
+//
+//
+//        }
+//        return inbetween;
+//    }
 
 
 

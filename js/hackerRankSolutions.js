@@ -211,42 +211,32 @@ function breakingRecords(scores) {
 
 }
 
-// // Divisible sum pairs
-// let ar = [1, 3, 2, 6, 1, 2]
-// let n = 6
-// // let k = 3
-// divisibleSumPairs(n, k, ar)
-// function divisibleSumPairs(n, k, ar) {
-//         let counter = 0;
-//         let index = 0;
-//
-//         // do {
-//             for (let i = 0; i < ar.length; i++) {
-//                 let num = ar[i]
-//                 index = i;
-//                 console.log(num)
-//                 let element;
-//                 for (let j = 1; j < index -1; i ++) {
-//                     console.log(num + ar[j] , i)
-//                     if ( (index < n) && (num + j[i]) % 3 === 0) {
-//                         console.log("yes")
-//                         if (j === 6) {
-//                             break
-//                         }
-//                     }
-//                 }
-//                 }
+// Divisible sum pairs
+let ar = [1, 3, 2, 6, 1, 2]
+let n = ar.length;
+let k = 3
+divisibleSumPairs(n, k, ar)
+    function divisibleSumPairs(n, k, ar) {
+        let counter = 0;
 
-        //
-        // } while( index <= n) {
+        for (let i = 0; i < ar.length; i++) {
+            for (let j = i + 1; j < ar.length; j++) {
+                if ((ar[i] + ar[j]) % k === 0) {
+                    counter++;
+                }
+            }
+        }
 
+        return counter;
+    }
 
-    // }
+   console.log(divisibleSumPairs(n, k , ar))
+
 
     // Bill Division
 
 const bill = [3, 10, 2,9]
-let k = 1;
+// let k = 1;
 let b = 4;
 function bonAppetit(bill, k, b) {
     let billTotal = 0;
