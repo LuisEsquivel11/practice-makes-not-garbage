@@ -254,6 +254,17 @@ function bonAppetit(bill, k, b) {
     }
 
 }
+// The Hurdle Race
+
+function hurdleRace(k, height) {
+    const highestHurdle = height.reduce((a, b) => Math.max(a, b), -Infinity);
+
+    if (k >= highestHurdle) {
+        return 0;
+    } else {
+        return highestHurdle - k;
+    }
+}
 
 
 
