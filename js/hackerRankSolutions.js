@@ -215,58 +215,77 @@ function breakingRecords(scores) {
 let ar = [1, 3, 2, 6, 1, 2]
 let n = ar.length;
 let k = 3
-divisibleSumPairs(n, k, ar)
-    function divisibleSumPairs(n, k, ar) {
-        let counter = 0;
-
-        for (let i = 0; i < ar.length; i++) {
-            for (let j = i + 1; j < ar.length; j++) {
-                if ((ar[i] + ar[j]) % k === 0) {
-                    counter++;
-                }
-            }
-        }
-
-        return counter;
-    }
-
-   console.log(divisibleSumPairs(n, k , ar))
+// divisibleSumPairs(n, k, ar)
+//     function divisibleSumPairs(n, k, ar) {
+//         let counter = 0;
+//
+//         for (let i = 0; i < ar.length; i++) {
+//             for (let j = i + 1; j < ar.length; j++) {
+//                 if ((ar[i] + ar[j]) % k === 0) {
+//                     counter++;
+//                 }
+//             }
+//         }
+//
+//         return counter;
+//     }
+//
+//    console.log(divisibleSumPairs(n, k , ar))
 
 
     // Bill Division
 
-const bill = [3, 10, 2,9]
-// let k = 1;
-let b = 4;
-function bonAppetit(bill, k, b) {
-    let billTotal = 0;
-    let annasActualBill = 0;
-    for (let i = 0; i < bill.length; i ++) {
-        billTotal += bill[i]
-    }
-    annasActualBill = (billTotal - bill[k]) / 2
-    console.log(billTotal, annasActualBill)
-    let difference = annasActualBill - b;
-    if (difference === 0) {
-        console.log( "Bon Appetit");
-    } else {
-       console.log( difference);
-    }
-
-}
+// const bill = [3, 10, 2,9]
+// // let k = 1;
+// let b = 4;
+// function bonAppetit(bill, k, b) {
+//     let billTotal = 0;
+//     let annasActualBill = 0;
+//     for (let i = 0; i < bill.length; i ++) {
+//         billTotal += bill[i]
+//     }
+//     annasActualBill = (billTotal - bill[k]) / 2
+//     console.log(billTotal, annasActualBill)
+//     let difference = annasActualBill - b;
+//     if (difference === 0) {
+//         console.log( "Bon Appetit");
+//     } else {
+//        console.log( difference);
+//     }
+//
+// }
 // The Hurdle Race
 
-function hurdleRace(k, height) {
-    const highestHurdle = height.reduce((a, b) => Math.max(a, b), -Infinity);
+// function hurdleRace(k, height) {
+//     const highestHurdle = height.reduce((a, b) => Math.max(a, b), -Infinity);
+//
+//     if (k >= highestHurdle) {
+//         return 0;
+//     } else {
+//         return highestHurdle - k;
+//     }
+// }
+// Counting valleys
+let steps = 8
+let path = ['U','D','D','D','U','D','U','U']
 
-    if (k >= highestHurdle) {
-        return 0;
-    } else {
-        return highestHurdle - k;
+function countingValleys(steps, path) {
+    let valleys = 0;
+    let elevation = 0;
+
+    for (let i = 0; i < path.length; i++) {
+        if (path[i] === 'U') {
+            elevation++;
+            if (elevation === 0) {
+                valleys++;
+            }
+        } else if (path[i] === 'D') {
+            elevation--;
+        }
     }
+    return valleys;
 }
-
-
+console.log(countingValleys(steps, path));
 
 
 
