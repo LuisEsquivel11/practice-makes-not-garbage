@@ -285,10 +285,31 @@ function countingValleys(steps, path) {
     }
     return valleys;
 }
-console.log(countingValleys(steps, path));
+// console.log(countingValleys(steps, path));
 
+// SubArray Division
 
+const s = [1, 2, 1, 3, 2]
+// const s = [1, 1, 1, 1, 1, 1]
+const d = 3
+    const m = 2
+function birthday(s, d , m) {
+    let counter = 0;
+    let sum;
+    for (let i = 0; i <= s.length - m; i++) {
+         sum = 0
+        for(let j = i; j < i + m; j++) {
+            sum += s[j]
+            }
+                if (sum === d) {
+                    counter++
+                }
+    }
+            return counter ;
 
+}
+
+console.log(birthday(s, d, m) )
 
 
 
