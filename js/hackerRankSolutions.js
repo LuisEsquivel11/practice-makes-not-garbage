@@ -317,31 +317,17 @@ const z = 3
 function catAndMouse(x, y, z) {
     let catA = x;
     let catB = y;
-    // // Check which cat is closer to mouse position
-    if (z > x && z > y) {
-        catA = z - x;
-        catB = z - y;
-    } else if (z < x || z < y) {
-        catA = x - z;
-        catB = y - z;
-    }
-
-    if (catA > catB) {
-        console.log("Cat B")
-    } else if (catB > catA) {
-        console.log("Cat A")
+    let winner = '';
+    if (Math.abs(z - catA ) > Math.abs(z - catB )) {
+            winner = "Cat B";
+    } else if (Math.abs(z - catB) > Math.abs(z - catA)) {
+            winner = "Cat A"
     } else {
-        console.log("Mouse C")
+        winner = "Mouse C";
     }
-
+        return winner
 }
-let a = 'abcd'
-let q = 1
-function test(a, q) {
- console.log(a.charAt(q))
-}
-
-test(a, q)
+catAndMouse(x, y, z)
 
 
 
