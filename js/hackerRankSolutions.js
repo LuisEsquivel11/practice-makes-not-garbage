@@ -309,9 +309,39 @@ function birthday(s, d , m) {
 
 }
 
-console.log(birthday(s, d, m) )
+// Cats and Mouse
+const x = 1
+const y = 2
+const z = 3
 
+function catAndMouse(x, y, z) {
+    let catA = x;
+    let catB = y;
+    // // Check which cat is closer to mouse position
+    if (z > x && z > y) {
+        catA = z - x;
+        catB = z - y;
+    } else if (z < x || z < y) {
+        catA = x - z;
+        catB = y - z;
+    }
 
+    if (catA > catB) {
+        console.log("Cat B")
+    } else if (catB > catA) {
+        console.log("Cat A")
+    } else {
+        console.log("Mouse C")
+    }
+
+}
+let a = 'abcd'
+let q = 1
+function test(a, q) {
+ console.log(a.charAt(q))
+}
+
+test(a, q)
 
 
 
