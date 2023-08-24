@@ -321,13 +321,30 @@ function catAndMouse(x, y, z) {
     if (Math.abs(z - catA ) > Math.abs(z - catB )) {
             winner = "Cat B";
     } else if (Math.abs(z - catB) > Math.abs(z - catA)) {
-            winner = "Cat A"
+            winner = "Cat A "
     } else {
         winner = "Mouse C";
     }
         return winner
 }
-catAndMouse(x, y, z)
+
+// Designer pdf viewer
+
+let h = [1, 3, 1, 3, 1, 4, 1, 3, 2, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5 ,5, 5, 5, 5, 7]
+let word = 'abc'
+function designerPdfViewer(h, word) {
+    let tallestLetter
+    let letterCode ;
+    let heights = []
+    for (let i = 0; i < word.length; i++) {
+        letterCode = word.charCodeAt(i) - 97
+        heights.push(h[letterCode])
+    }
+    for (let j = 0; j < heights.length; j++) {
+        tallestLetter = heights.reduce((a, b) => Math.max(a, b), -Infinity)
+    }
+    return  word.length * 1 * tallestLetter
+}
 
 
 
