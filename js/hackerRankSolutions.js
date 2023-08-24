@@ -213,7 +213,7 @@ function breakingRecords(scores) {
 
 // Divisible sum pairs
 let ar = [1, 3, 2, 6, 1, 2]
-let n = ar.length;
+// let n = ar.length;
 let k = 3
 // divisibleSumPairs(n, k, ar)
 //     function divisibleSumPairs(n, k, ar) {
@@ -346,7 +346,29 @@ function designerPdfViewer(h, word) {
     return  word.length * 1 * tallestLetter
 }
 
+// Viral Advertising
+//Day  Shared  Liked Cumulative
+// 1      5     2       2
+// 2      6     3       5
+// 3      9     4       9
+// 4     12     6      15
+// 5     18     9      24
+let n = 3
+function viralAdvertising(n) {
+    let shared = 5
+    let totalLikes = 0;
+    if (n > 1) {
+        for (let i = 0; i < n; i++) {
+            let likes = Math.floor(shared / 2)
+            shared = likes * 3;
+            totalLikes += likes;
+        }
+    } else {
+        totalLikes = Math.floor(shared / 2)
+    }
+        return totalLikes
+}
 
-
+viralAdvertising(n)
 
 
