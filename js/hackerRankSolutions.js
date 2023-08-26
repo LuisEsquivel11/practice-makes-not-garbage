@@ -353,7 +353,7 @@ function designerPdfViewer(h, word) {
 // 3      9     4       9
 // 4     12     6      15
 // 5     18     9      24
-let n = 3
+// let n = 3
 function viralAdvertising(n) {
     let shared = 5
     let totalLikes = 0;
@@ -369,6 +369,20 @@ function viralAdvertising(n) {
         return totalLikes
 }
 
-viralAdvertising(n)
+// Utopian Tree
 
-
+function utopianTree(n) {
+    let height = 1
+    let increase = 1
+    for (let i = 1; i <= n; i++)
+        if (n > 0  && (i % 2 !== 0) ) {
+            height *= 2;
+            console.log(height, i)
+        } else if (n > 1 && (i % 2 === 0)) {
+            height += 1;
+            console.log('hello')
+        }
+    return height;
+}
+console.log(utopianTree(3))
+// console.log(utopianTree(4))
