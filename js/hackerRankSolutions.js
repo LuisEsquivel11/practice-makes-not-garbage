@@ -214,7 +214,7 @@ function breakingRecords(scores) {
 // Divisible sum pairs
 let ar = [1, 3, 2, 6, 1, 2]
 // let n = ar.length;
-let k = 3
+// let k = 3
 // divisibleSumPairs(n, k, ar)
 //     function divisibleSumPairs(n, k, ar) {
 //         let counter = 0;
@@ -384,5 +384,25 @@ function utopianTree(n) {
         }
     return height;
 }
-console.log(utopianTree(3))
+// console.log(utopianTree(3))
 // console.log(utopianTree(4))
+
+// Angry Professor
+
+const k = 3;
+let a = [-2, -1, 0, 1, 2, -3, -4, 4]
+function angryProfessor(k, a) {
+    let onTime = 0;
+    for (let i = 0; i < a.length; i++) {
+        if (a[i] <= 0) {
+            onTime++
+        }
+    }
+    if (onTime >= k) {
+        return "NO"
+    } else {
+        return "YES"
+    }
+}
+
+
