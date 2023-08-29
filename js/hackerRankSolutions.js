@@ -418,3 +418,21 @@ function findDigits(n) {
     return count;
 }
 
+// Beautiful Days at the movies
+
+function beautifulDays(i, j, k) {
+    let count = 0;
+   const reversed = num => parseFloat(num.toString().split('').reverse().join('')) * Math.sign(num)
+
+    for (let x = i; x <= j; x++) {
+        console.log(x - reversed(x) )
+        if (Number.isInteger(x - reversed(x) / k) || x - reversed(x) === 0 ) {
+            count++
+        }
+    }
+   // if( Number.isInteger(i - reversed(i) % k) ) {
+
+    return count;
+}
+
+console.log(beautifulDays(20, 23, 6));
