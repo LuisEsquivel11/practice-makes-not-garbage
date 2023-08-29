@@ -150,7 +150,7 @@ Note: - 12:00:00AM on a 12-hour clock is 00:00:00 on a 24-hour clock.
 //     hour = hour.toString().padStart(2, "0");
 //
 //     return `${hour}:${minutes}:${seconds}`;
-// }
+}
 // console.log(timeConversion(s), s)
 // console.log(timeConversion(a), a)
 // console.log(timeConversion(b), b)
@@ -420,19 +420,21 @@ function findDigits(n) {
 
 // Beautiful Days at the movies
 
-function beautifulDays(i, j, k) {
-    let count = 0;
-   const reversed = num => parseFloat(num.toString().split('').reverse().join('')) * Math.sign(num)
+// function beautifulDays(i, j, k) {
+//     let count = 0;
+//    const reversed = num => parseFloat(num.toString().split('').reverse().join('')) * Math.sign(num)
+//
+//     for (let x = i; x <= j; x++) {
+//         console.log(x - reversed(x) )
+//         if (Number.isInteger(x - reversed(x) / k) || x - reversed(x) === 0 ) {
+//             count++
+//         }
+//     }
+//    // if( Number.isInteger(i - reversed(i) % k) ) {
+//
+//     return count;
+// }
+//
+// console.log(beautifulDays(20, 23, 6));
 
-    for (let x = i; x <= j; x++) {
-        console.log(x - reversed(x) )
-        if (Number.isInteger(x - reversed(x) / k) || x - reversed(x) === 0 ) {
-            count++
-        }
-    }
-   // if( Number.isInteger(i - reversed(i) % k) ) {
-
-    return count;
-}
-
-console.log(beautifulDays(20, 23, 6));
+//

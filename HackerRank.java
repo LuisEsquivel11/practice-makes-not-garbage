@@ -8,7 +8,7 @@ public class HackerRank {
         Collections.addAll(a, 2, 6);
         ArrayList b = new ArrayList();
         Collections.addAll(b,  24, 36);
-        System.out.println(getTotalX(a, b));
+        loopsII(0, 2, 10);
     }
 
     public static void staircase(int n) {
@@ -63,7 +63,19 @@ public class HackerRank {
 //        return inbetween;
 //    }
 
+    public static void loop(int n) {
+        for (int i = 1; i <= 10; i++) {
+            System.out.println(n + " x " + i + " = " + (n*i));
+        }
+    }
 
+    public static void loopsII(int a, int b, int n) {
+        int sum = 0;
+        for (int i = 1; i <= n; i++) {
+            sum += sum + (b*1);
+            System.out.println(sum);
+        }
+    }
 
 
 
