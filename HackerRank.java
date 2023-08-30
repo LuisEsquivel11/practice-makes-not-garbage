@@ -8,7 +8,7 @@ public class HackerRank {
         Collections.addAll(a, 2, 6);
         ArrayList b = new ArrayList();
         Collections.addAll(b,  24, 36);
-        loopsII(0, 2, 10);
+        loopsII(5, 3, 5);
     }
 
     public static void staircase(int n) {
@@ -72,7 +72,7 @@ public class HackerRank {
     public static void loopsII(int a, int b, int n) {
         int sum = 0;
         for (int i = 1; i <= n; i++) {
-            sum += sum + (b*1);
+            sum += a + (b*1);
             System.out.println(sum);
         }
     }

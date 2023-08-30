@@ -150,7 +150,7 @@ Note: - 12:00:00AM on a 12-hour clock is 00:00:00 on a 24-hour clock.
 //     hour = hour.toString().padStart(2, "0");
 //
 //     return `${hour}:${minutes}:${seconds}`;
-}
+// }
 // console.log(timeConversion(s), s)
 // console.log(timeConversion(a), a)
 // console.log(timeConversion(b), b)
@@ -437,4 +437,15 @@ function findDigits(n) {
 //
 // console.log(beautifulDays(20, 23, 6));
 
-//
+// Picking Numbers
+
+
+function pickingNumbers(a) {
+    let count = 0
+    a.forEach( num => {
+        const subarray = a.filter( subNum => num - subNum === 0 || num - subNum === 1);
+        if( subarray.length > count) count = subarray.length;
+    });
+    return count;
+}
+
